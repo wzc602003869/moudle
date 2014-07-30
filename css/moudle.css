@@ -6,9 +6,36 @@
     height:100%;
     z-index:10;
 }
+.page{
+    display: none;
+}
+
 .action{
 
+   /* -webkit-transition:-webkit-transform 2s;
+    -webkit-transform:translate(0px,0px);*/
+    -webkit-transition:-webkit-transform 0.2s;
+    -webkit-transition-timing-function:ease-in;
+}
+@keyframes donghua{
+    0%{
+        -webkit-transform:translate(0px,0px);
+    }
+    100%{
+        -webkit-transform:translate(0px,100px);
+    }
 }
 .active{
     z-index: 50;
+    display: block;
+    /*-webkit-transition:-webkit-transform 2s;
+    -webkit-transform: scale(0.8,0.8);*/
+}
+.move{
+    z-index: 60;
+    -webkit-transform:translate(0px,0px);
+    display: block;
+}
+.hide{
+    display: none;
 }
