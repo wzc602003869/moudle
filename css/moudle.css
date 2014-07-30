@@ -5,6 +5,18 @@
     width:100%;
     height:100%;
 }
+#musicbtn{
+    width: 50px;
+    height: 50px;
+    background: url("../imgs/music.png") no-repeat center;
+    background-size: 30px 30px;
+    border: white 4px solid;
+    border-radius: 50px;
+    position: absolute;
+    right: 10px;
+    top:10px;
+    z-index:100;
+}
 .page{
     display: none;
 }
