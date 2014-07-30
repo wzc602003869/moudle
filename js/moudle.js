@@ -4,7 +4,7 @@
 document.addEventListener("touchmove", function(e){
     e.preventDefault();
 }, false);
-var height = document.documentElement.clientHeight,top1;
+var height = document.documentElement.clientHeight,width = document.documentElement.clientWidth,top1;
 //alert(height);
 $(".page").on("touchstart",function(e){
    // console.log(e.touches);
