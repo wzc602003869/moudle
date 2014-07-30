@@ -47,6 +47,7 @@ $("canvas").on("touchstart",function(e){
         var px=(transPixs.length / (pixles.length / 4) * 100).toFixed(2);
         console.log(px);
         if(px>50){
+            $("#bgmp3")[0].play();
             $("canvas").css("-webkit-transition","opacity 2s").css("opacity",0);
             setTimeout(function(){
                 $("canvas").css("display","none");
