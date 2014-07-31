@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="en" ng-app="myapp">
     <title></title>
     <meta charset="utf-8">
     <meta name="apple-touch-fullscreen" content="YES">
@@ -29,31 +29,44 @@
         }
     </script>
     <!--移动端版本兼容 end -->
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/control.js"></script>
 </head>
-<body>
-    <section class = "pos">
-        <div style="position: relative;left:50%;top:50%;width:128px;height:128px;">
-            <img src="imgs/load.gif" style="position: relative;top:-50%;left:-50%;" alt=""/>
-            <audio id="bgmp3" style="display: none">
-                <source src="bg.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-    </section>
-    <section>
-        <div id = "musicbtn"></div>
-    </section>
-    <section>
+<body ng-controller="controller">
+ <section class = "pos">
+     <div style="position: relative;left:50%;top:50%;width:128px;height:128px;">
+         <img src="imgs/load.gif" style="position: relative;top:-50%;left:-50%;" alt=""/>
+         <audio id="bgmp3" style="display: none">
+             <source src="bg.mp3" type="audio/mpeg">
+         </audio>
+     </div>
+ </section>
+ <section>
+     <div id = "musicbtn">
+         <span class = "musiccon" >开启</span>
+         <span class = "musiccon" >关闭</span>
+     </div>
+ </section>
+ <!--<section>
+     <div class = "page pos active">
+         <img class = "pos" src="imgs/1.jpg"  alt=""/>
+         <canvas style="position:absolute;z-index: 60"></canvas>
+     </div>
+     <div class = "page pos">
+         <img class = "pos" src="imgs/2.jpg" alt=""/>
+     </div>
+     <div class = "page pos" class = "pos">
+         <img class = "pos" src="imgs/3.jpg" alt=""/>
+     </div>
+     </section>-->
         <div class = "page pos active">
             <img class = "pos" src="imgs/1.jpg"  alt=""/>
             <canvas style="position:absolute;z-index: 60"></canvas>
         </div>
-        <div class = "page pos">
-            <img class = "pos" src="imgs/2.jpg" alt=""/>
+        <div class = "page pos" ng-repeat="page in pages">
+            <img ng-src="imgs/{{page.img}}" alt=""/>
         </div>
-        <div class = "page pos" class = "pos">
-            <img class = "pos" src="imgs/3.jpg" alt=""/>
-        </div>
-    </section>
+
     <script type="text/javascript" src="js/zepto.js"></script>
     <script type="text/javascript" src="js/moudle.js"></script>
     <script type="text/javascript" src="js/canvas.js"></script>

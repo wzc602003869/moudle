@@ -90,3 +90,19 @@ $(".page").on("touchstart",function(e){
 
     })
 })
+var mus=0;
+$("#musicbtn").on("touchstart",function(e){
+    //$(".musiccon").eq(mus).css("display","block").css("opacity",1);
+    $(".musiccon").removeClass("show");
+    setTimeout(function(){
+       // $(".musiccon").removeClass("show").animate({"opa"});
+    },2001)
+    if(mus==0){
+        $("#bgmp3")[0].play();
+        mus=1;
+    }else{
+        $("#bgmp3")[0].pause();
+        mus=0;
+    }
+    e.stopPropagation();
+})
