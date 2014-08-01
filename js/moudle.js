@@ -84,17 +84,18 @@ $(".page").on("touchstart",function(e){
                 },200);
                 $(document).off();
             }
-
-
         })
 
     })
 })
-var mus=0;
+var mus= 0,time;
 $("#musicbtn").on("touchstart",function(e){
+    clearTimeout(time);
+    $(".musiccon").removeClass("animate");
     //$(".musiccon").eq(mus).css("display","block").css("opacity",1);
-    $(".musiccon").removeClass("show");
-    setTimeout(function(){
+    $(".musiccon").eq(mus).addClass("animate");
+    time = setTimeout(function(){
+        $(".musiccon").removeClass("animate");
        // $(".musiccon").removeClass("show").animate({"opa"});
     },2001)
     if(mus==0){
