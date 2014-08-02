@@ -9,6 +9,7 @@
     z-index:100;
     position: absolute;
     right: 0px;
+    bottom: 80px;
 }
 #musicbtn{
     width: 50px;
@@ -20,7 +21,7 @@
     position: absolute;
     right: 10px;
     top:10px;
-    -webkit-animation:reverseRotataZ 1.2s linear infinite
+    -webkit-animation:reverseRotataZ 1.2s linear infinite;
 }
 .musiccon{
     width: 90px;
@@ -37,7 +38,101 @@
 .page{
     display: none;
 }
-
+.fly{
+    background: url("../imgs/fly.png") no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 30px;
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    right: 20px;
+    top: -10px;
+}
+.fly1{
+    -webkit-animation:fly1 1.2s linear infinite;
+    -webkit-animation-delay:0s;
+}
+.fly2{
+    -webkit-animation:fly2 1.2s linear infinite;
+    -webkit-animation-delay:2s;
+}
+.fly3{
+    -webkit-animation:fly3 1.2s linear infinite;
+    -webkit-animation-delay:4s;
+}
+.fly4{
+    -webkit-animation:fly4 1.2s linear infinite;
+    -webkit-animation-delay:3s;
+}
+.fly5{
+    -webkit-animation:fly5 1.2s linear infinite;
+    -webkit-animation-delay:4s;
+}
+.fly6{
+    -webkit-animation:fly6 1.2s linear infinite;
+    -webkit-animation-delay:5s;
+}
+@-webkit-keyframes fly1{
+    0%{
+        opacity: 1;
+        -webkit-transform:translate(0px,0px) scale(1) rotateZ(0deg);
+    }
+    100%{
+        opacity:0;
+        -webkit-transform:translate(-40px,-50px) scale(0) rotateZ(90deg);
+    }
+}
+@-webkit-keyframes fly2{
+    0%{
+        opacity: 1;
+        -webkit-transform:translate(px,0px) scale(1) rotateZ(0deg);
+    }
+    100%{
+        opacity:0;
+        -webkit-transform:translate(-35px,-50px) scale(0) rotateZ(-90deg);
+    }
+}
+@-webkit-keyframes fly3{
+    0%{
+        opacity: 1;
+        -webkit-transform:translate(0px,0px) scale(1) rotateZ(90deg);
+    }
+    100%{
+        opacity:0;
+        -webkit-transform:translate(-45px,-50px) scale(0) rotateZ(0deg);
+    }
+}
+@-webkit-keyframes fly4{
+    0%{
+        opacity: 1;
+        -webkit-transform:translate(0px,0px) scale(1) rotateZ(0deg);
+    }
+    100%{
+        opacity:0;
+        -webkit-transform:translate(-10px,-50px) scale(0) rotateZ(90deg);
+    }
+}
+@-webkit-keyframes fly5{
+    0%{
+        opacity: 1;
+        -webkit-transform:translate(0px,0px) scale(1) rotateZ(0deg);
+    }
+    100%{
+        opacity:0;
+        -webkit-transform:translate(-50px,-50px) scale(0) rotateZ(90deg);
+    }
+}
+@-webkit-keyframes fly6{
+    0%{
+        opacity: 1;
+        -webkit-transform:translate(0px,0px) scale(1) rotateZ(0deg);
+    }
+    100%{
+        opacity:0;
+        -webkit-transform:translate(-20px,-50px) scale(0) rotateZ(90deg);
+    }
+}
 .action{
 
    /* -webkit-transition:-webkit-transform 2s;
