@@ -17,6 +17,16 @@
     top:10px;
     z-index:100;
 }
+.musiccon{
+    position: absolute;
+    color: white;
+    left: -70px;
+    top:10px;
+    font-size: 30px;
+    display: none;
+    font-weight: bold;
+    display: none;
+}
 .page{
     display: none;
 }
@@ -42,11 +52,17 @@
 .hide{
     display: none;
 }
-/*@-webkit-keyframes myfirst *//* Safari 和 Chrome */
-/*{*/
-    /*from {opacity:1;}*/
-    /*to {opacity:0;}*/
-/*}*/
-/*.animate{*/
-    /*-webkit-animation: myfirst 5s;*/
-/*}*/
+.show{
+    display: block;
+    opacity:1;
+}
+@-webkit-keyframes myfirst
+{
+    from {opacity:1;}
+    to {opacity:0;}
+}
+.animate{
+    display:block;
+    -webkit-animation: myfirst 2s;
+}
+
