@@ -1,6 +1,7 @@
 /**
  * Created by lenovo on 2014/7/30.
  */
+console.log($);
 document.addEventListener("touchmove", function(e){
     e.preventDefault();
 }, false);
