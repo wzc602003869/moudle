@@ -1,10 +1,65 @@
-.pos{
+.pos,.photo{
     position: absolute;
     top: 0px;
     left: 0px;
     width:100%;
     height:100%;
 }
+.window1,.window2,.window3{
+    border: 20px white solid;
+    position: absolute;
+    z-index: 100;
+    width:100%;
+    height:100%;
+    -webkit-transform:translate(700px,1400px) scale(1.5) rotateZ(60deg);
+
+}
+.window1{
+    -webkit-animation:win1 0.5s linear;
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+    /*-webkit-transform: scale(0.8) rotateZ(5deg);*/
+}
+.window2{
+    -webkit-animation:win2 0.5s linear;
+    -webkit-animation-delay:0.4s;
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+    /*-webkit-transform: scale(0.8) rotateZ(10deg);*/
+
+}
+.window3{
+    -webkit-animation:win3 0.5s linear;
+    -webkit-animation-delay:0.8s;
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+    /*-webkit-transform: scale(0.8) rotateZ(15deg);*/
+}
+@-webkit-keyframes win1{
+    0%{
+        -webkit-transform:translate(700px,1400px) scale(1.5) rotateZ(60deg);
+    }
+    100%{
+        -webkit-transform:translate(0px,0px) scale(0.8) rotateZ(5deg);
+    }
+}
+@-webkit-keyframes win2{
+    0%{
+        -webkit-transform:translate(700px,1400px) scale(1.5) rotateZ(60deg);
+    }
+    100%{
+        -webkit-transform:translate(0px,0px) scale(0.8) rotateZ(10deg);
+    }
+}
+@-webkit-keyframes win3{
+    0%{
+        -webkit-transform:translate(700px,1400px) scale(1.5) rotateZ(60deg);
+    }
+    100%{
+        -webkit-transform:translate(0px,0px) scale(0.8) rotateZ(15deg);
+    }
+}
+
 #con{
     z-index:100;
     position: absolute;
@@ -86,7 +141,7 @@
 @-webkit-keyframes fly2{
     0%{
         opacity: 1;
-        -webkit-transform:translate(px,0px) scale(1) rotateZ(0deg);
+        -webkit-transform:translate(0px,0px) scale(1) rotateZ(0deg);
     }
     100%{
         opacity:0;
