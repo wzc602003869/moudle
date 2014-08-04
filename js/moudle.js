@@ -75,4 +75,35 @@ $("#musicbtn").on("touchstart",function(e){
         mus=0;
     }
     e.stopPropagation();
+});
+$(".window").on("touchstart",function(e){
+    e.stopPropagation();
+    var i = $(this).index();
+    var left1 = event.touches[0].clientX,left2;
+    var p = i-1;
+    var q = i+1;
+    if(i==0){
+        p=$(".window").length-1;
+    }else if(i==($(".window").length-1)){
+        q=0;
+    }
+    $(".window").on("touchmove",function(e){
+        left2 = event.touches[0].clientX;
+    })
+    $(document).on("touchend",function(e){
+        if((left2-left1)>100){
+            $(".window").eq(i).addClass("left").css("z-index",102);
+            setTimeout(function(){
+                $(".window").eq(i).css("z-index",100-i).removeClass("left");
+            },200)
+        };
+        if((left1-left2)>100){
+            $(".window").eq(i).addClass("right").css("z-index",102);
+            setTimeout(function(){
+                $(".window").eq(i).css("z-index",100-i).removeClass("right");
+            },200)
+        }
+        $(".window").eq(p).css("z-index",101);
+        $(document).off();
+    });
 })
